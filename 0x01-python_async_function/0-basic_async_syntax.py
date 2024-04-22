@@ -4,7 +4,7 @@ import asyncio
 import random
 
 """
-asynchronous coroutine 
+asynchronous coroutine
 """
 
 
