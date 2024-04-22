@@ -12,5 +12,5 @@ async def wait_n(n: int, max_delay: int) -> float:
     asynchronous coroutine that takes in 2 arguments
     and returns a float
     """
-    tasks = [wait_random(max_delay) for i in range(n)]
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
     return [await task for task in asyncio.as_completed(tasks)]
